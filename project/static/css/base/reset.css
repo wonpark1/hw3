@@ -1,0 +1,294 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --font-1: rgba(51, 51, 51, 1);
+  --font-2: rgba(153, 153, 153, 1);
+  --font-3: rgba(221, 221, 221, 1);
+
+  --background: rgba(255, 255, 255, 1);
+  --stroke-1: rgba(204, 204, 204, 1);
+  --stroke-2: rgba(226, 226, 226, 1);
+
+  --main: rgba(94, 0, 128, 1);
+  --red: rgba(250, 98, 47, 1);
+
+  --nav-btn-font-family: "Pretendard", Helvetica;
+  --nav-btn-font-weight: 500;
+  --nav-btn-font-size: 16px;
+  --nav-btn-letter-spacing: -0.30000001192092896px;
+  --nav-btn-line-height: 20px;
+  --nav-btn-font-style: normal;
+  --body-2-font-family: "Pretendard", Helvetica;
+  --body-2-font-weight: 400;
+  --body-2-font-size: 14px;
+  --body-2-letter-spacing: -1px;
+  --body-2-line-height: 20px;
+  --body-2-font-style: normal;
+  --head-3-font-family: "Pretendard", Helvetica;
+  --head-3-font-weight: 500;
+  --head-3-font-size: 15px;
+  --head-3-letter-spacing: 0px;
+  --head-3-line-height: 20px;
+  --head-3-font-style: normal;
+  --sidenav-btn-font-family: "Pretendard", Helvetica;
+  --sidenav-btn-font-weight: 400;
+  --sidenav-btn-font-size: 14px;
+  --sidenav-btn-letter-spacing: 0px;
+  --sidenav-btn-line-height: 17px;
+  --sidenav-btn-font-style: normal;
+  --caption-font-family: "Pretendard", Helvetica;
+  --caption-font-weight: 400;
+  --caption-font-size: 12px;
+  --caption-letter-spacing: 0px;
+  --caption-line-height: 16px;
+  --caption-font-style: normal;
+  --btn-font-family: "Pretendard", Helvetica;
+  --btn-font-weight: 500;
+  --btn-font-size: 16px;
+  --btn-letter-spacing: 0px;
+  --btn-line-height: 24px;
+  --btn-font-style: normal;
+  --body-1-font-family: "Pretendard", Helvetica;
+  --body-1-font-weight: 400;
+  --body-1-font-size: 16px;
+  --body-1-letter-spacing: 0px;
+  --body-1-line-height: 24px;
+  --body-1-font-style: normal;
+  --bold-body-1-font-family: "Pretendard", Helvetica;
+  --bold-body-1-font-weight: 700;
+  --bold-body-1-font-size: 16px;
+  --bold-body-1-letter-spacing: 0px;
+  --bold-body-1-line-height: 24px;
+  --bold-body-1-font-style: normal;
+  --bold-body2-font-family: "Pretendard", Helvetica;
+  --bold-body2-font-weight: 600;
+  --bold-body2-font-size: 14px;
+  --bold-body2-letter-spacing: -1px;
+  --bold-body2-line-height: 20px;
+  --bold-body2-font-style: normal;
+  --drop-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-size: 12px;
+  line-height: 16px;
+  color: #202020;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+}
+textarea {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: transparent;
+  border: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+button,
+input {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+}
+button {
+  background-color: transparent;
+}
+fieldset,
+img {
+  border: 0;
+}
+img {
+  vertical-align: top;
+}
+ol,
+ul {
+  list-style: none;
+}
+address,
+em {
+  font-style: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+iframe {
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: top;
+}
+mark {
+  background-color: transparent;
+}
+i {
+  font-style: normal;
+}

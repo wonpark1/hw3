@@ -18,7 +18,6 @@ virtualenv venv --python=3.12
 
 ```SSH
 # venv - bin 포함된 경로에서
-cd venv
 source ./bin/activate
 ```
 
