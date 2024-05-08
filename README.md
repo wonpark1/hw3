@@ -92,6 +92,6 @@ python manage.py runserver
 |:---:|:---:|
 |<img src="https://github.com/LikeLion-at-DGU/12th_Front_market_kurly/assets/117021241/7d4ffaf8-aa5c-4194-b7a3-edcf3e626119" width="100" height="100" />|멋쟁이 사자처럼 12기 부회장 백엔드의 신 **이상준!**|
 |<img src="https://github.com/LikeLion-at-DGU/12th_Front_market_kurly/assets/117021241/16cd352b-e932-41f6-97bb-201fab249891" width="100" height="100" />|멋쟁이 사자처럼 12기 프론트엔드의 권위자 **설현아!**|
-|<img src="mblogthumb-phinf.pstatic.net/MjAyMzExMDRfMzIg/MDAxNjk5MDg2MzgwMjUy.lJyAk6Jbofs0JCpCTJ_0i083P10f11VJO13QJC_Fo30g.nQQBaD5VI1MAuSRGSlRfN02Xt5Tj_ZcJmTIdO5NHpBQg.JPEG.ghkdwjdtka/download.jpg" width="100" height="100" />| **심서현!**|
+|<img src="https://ifh.cc/g/jqhLCc.jpg" width="100" height="100" />| **심서현!**|
 
 
