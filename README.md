@@ -1,8 +1,14 @@
-# 프론트엔드 5주차 과제 레포지토리입니다.
+## 🌼 프론트엔드 5-6주차 과제 레포지토리입니다.
 
-# 레포지토리 실행법
+멋쟁이사자처럼 12기 프론트엔드 **마켓컬리** 클론 코딩
 
-## Mac
+[피그마 링크](https://www.figma.com/design/QGRWFGJkl76ALiF4wJmMaS/%EB%A7%88%EC%BC%93%EC%BB%AC%EB%A6%AC-%ED%81%B4%EB%A1%A0-%EC%BD%94%EB%94%A9?node-id=0%3A1&t=ARtxG3bGHf97tu1Z-1)
+
+---
+
+## ✏️ 레포지토리 실행법
+
+# 🍎 Mac
 
 ### 0. python 3.11 버전 설치
 
@@ -43,7 +49,7 @@ python manage.py runserver
 
 ---
 
-## Windows
+# 💻 Windows
 
 ### 1. python virtualenv를 이용한 가상환경 정의
 
@@ -78,3 +84,10 @@ python manage.py runserver
 ```
 
 ---
+
+---
+
+## 도움을 주신분
+| 이미지 | 소개 |
+|:---:|:---:|
+|<img src="https://github.com/LikeLion-at-DGU/12th_Front_market_kurly/assets/117021241/7d4ffaf8-aa5c-4194-b7a3-edcf3e626119" width="100" height="100" />|멋쟁이 사자처럼 12기 부회장 백엔드의 신 **이상준!**|
