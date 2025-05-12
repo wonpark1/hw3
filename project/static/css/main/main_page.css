@@ -1,1 +1,295 @@
-/* main page - CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ▣ 변수 ----------------------------------------------------------- */
+:root {
+  --purple: #5e0080;
+  --gray-100: #f6f6f6;
+  --gray-200: #e2e2e2;
+  --gray-400: #999;
+  --fs-s: 14px;
+  --fs-m: 16px;
+}
+
+/* ▣ 컨테이너 ------------------------------------------------------- */
+.mp-wrapper {
+  max-width: 1050px; /* ← Figma 아트보드 폭1180 */
+  margin: 40px auto 120px;
+  padding: 0 12px;
+  font-size: var(--fs-m);
+}
+
+/* ===== 2차 네비 ================================================== */
+/* ▣ 2차 네비: 필요 없으므로 숨김 ------------------------------ */
+.sub-nav {
+  display: none;
+} /* ← 중복 메뉴 제거 */
+
+/* ▣ 태그 박스 → 4×2 그리드 ---------------------------------- */
+/* ===== 카테고리 네비 (두 줄, 4칸 × 2칸) ===================== */
+.category-nav {
+  border: 1px solid var(--gray-200);
+  padding: 30px 12px; /* Figma: 사방 9.62px */
+  margin: 0 auto 36px;
+  max-width: 1180px; /* 상단 네비와 폭 통일 */
+  width: 100%;
+}
+
+/* 핵심: 그리드 설정 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4칸 × 2줄 */
+  justify-items: start;
+  column-gap: 100px; /* 가로 19.972 */
+  row-gap: 60px; /* 세로 16    */
+  list-style: none;
+  align-content: flex-start;
+  padding-top: 7.219px;
+}
+.category-grid li {
+  /* Figma : 43.313px + 좌우 7.22px 여백 */
+  width: 43.313px; /* Figma 글자 칸 폭 */
+  padding: 0 7.22px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+}
+.category-grid li.on {
+  color: var(--purple);
+  font-weight: 600;
+}
+.category-grid li:hover {
+  text-decoration: underline;
+}
+
+/* ===== 본문 ------------------------------------------------------ */
+.body-layout {
+  display: grid;
+  grid-template-columns: 212px 1fr; /* ⬅ 필터 폭 212px */
+  gap: 48px;
+}
+
+/* ─ 필터 사이드바 ------------------------------------------------ */
+.filter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.filter-top h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.reset {
+  display: flex;
+  align-items: center;
+  font: 500 3.609px/4.813px Pretendard, sans-serif;
+  color: #ddd;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.reset .ico {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.filter-wrap summary {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.filter-wrap ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 2px;
+  font-size: 14px;
+  color: #555;
+}
+.filter-wrap em {
+  font-style: normal;
+  color: var(--gray-400);
+  margin-left: 4px;
+}
+.filter-wrap input {
+  margin-right: 6px;
+} /* ───────── 필터 헤더(아이콘+글자) ───────── */
+.filter-top .reset {
+  /* 기본 버튼 리셋 */
+  border: none;
+  background: none;
+  font: 14px/1 Pretendard, sans-serif;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  gap: 4px; /* ← 아이콘-글자 간 4 px (Figma ≈3.85) */
+  cursor: pointer;
+}
+
+/* SVG 사이즈(4.813×4.813 px) */
+.filter-top .reset svg {
+  width: 8.813px;
+  height: 8.813px;
+  margin-right: 1.2px; /* ← Figma에서 측정한 간격 */
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* 호버 시 색 바꾸고 싶으면 ↓ */
+.filter-top .reset:hover {
+  color: #666;
+}
+.filter-top .reset:hover svg {
+  fill: #666;
+}
+
+/* ─ 상품 리스트 --------------------------------------------------- */
+.prod-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+.total {
+  font-size: 18px;
+  font-weight: 600;
+}
+.sort a {
+  font-size: 14px;
+  color: #666;
+  margin-left: 16px;
+}
+.sort .on {
+  color: #000;
+  font-weight: 600;
+}
+
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 262px); /* ③ 3열 고정 */
+  column-gap: 24px; /* 카드 사이 24px */
+  row-gap: 60px; /* 위·아래 60px (Figma) */
+  justify-content: start; /* 좌측 정렬 */
+}
+.card {
+  width: 262px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.thumb {
+  width: 100%;
+  height: 320px;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 14px;
+}
+/* 담기 버튼 */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px; /* 실제 Figma 간격 1.925px → 근사치 */
+  height: 36px; /* 버튼 높이 36px */
+  border: 0.24px solid #ddd; /* stroke-2 → 0.24px */
+  border-radius: 0.96px; /* radius-0.96 */
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 아이콘 정확 사이즈 */
+.cart-ico {
+  width: 15.775px;
+  height: 15.775px;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+.price em {
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 2px;
+}
+
+.card:hover .thumb {
+  outline: 2px solid var(--purple);
+}
+.card:hover .name {
+  text-decoration: underline;
+}
+
+/* ▣ 모바일 -------------------------------------------------------- */
+@media (max-width: 768px) {
+  .mp-wrapper {
+    margin: 20px auto 60px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  .body-layout {
+    grid-template-columns: 1fr;
+  }
+  .filter {
+    order: 2;
+    margin-top: 40px;
+  }
+  .sub-nav {
+    gap: 24px;
+    overflow-x: auto;
+  }
+  .prod-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px 16px;
+  }
+  .card {
+    width: auto;
+  }
+  .thumb {
+    height: 200px;
+  }
+}

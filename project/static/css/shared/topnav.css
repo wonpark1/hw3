@@ -111,7 +111,7 @@ input::placeholder {
 }
 
 .topnav .nav-2 .category {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 1rem; /* 16px */
