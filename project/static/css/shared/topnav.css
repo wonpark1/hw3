@@ -119,10 +119,6 @@ input::placeholder {
 
 .topnav .nav-2 .nav-menu-list {
   display: flex;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
 }
 
 .topnav .nav-2 .nav-menu-list > a {
@@ -130,7 +126,7 @@ input::placeholder {
   width: 9.375rem; /* 150px */
   height: 2.3125rem; /* 37px */
   justify-content: center;
-  padding: 1.125rem 0 0;
+  align-items: center;
 }
 
 .topnav .nav-2 .right-button {

@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <link rel="stylesheet" href="{% static 'css/main/main_page.css' %}" />
-
 <main class="mp-wrapper">
   <section class="category-nav">
     <ul class="category-grid">
@@ -12,31 +11,21 @@
       <li>주방·리빙</li>
       <li>뷰티</li>
       <li>패션·잡화</li>
-      <!-- 필요하면 항목 추가 -->
     </ul>
   </section>
 
   <section class="body-layout">
-    <!-- ▣ 왼쪽 : 필터 ---------------------------------------- -->
     <aside class="filter">
       <header class="filter-top">
         <h3>필터</h3>
 
-        <!-- 초기화 버튼 -->
         <button type="button" class="reset">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="6"
-            height="6"
-            viewBox="0 0 6 6"
-            fill="none"
-          >
+          <svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6">
             <path
               d="M2.56391 4.70684C2.21968 4.60992 1.93895 4.42026 1.72172 4.13786C1.50449 3.85546 1.39587 3.53045 1.39587 3.16283C1.39587 2.97233 1.42762 2.79103 1.49112 2.61891C1.55462 2.4468 1.64485 2.28889 1.76182 2.14518C1.79859 2.10508 1.8437 2.08419 1.89718 2.08252C1.95065 2.08085 1.99911 2.10174 2.04255 2.14518C2.07932 2.18194 2.09853 2.22706 2.1002 2.28053C2.10187 2.33401 2.08433 2.38414 2.04757 2.43092C1.96736 2.53453 1.90553 2.64816 1.86208 2.77181C1.81864 2.89546 1.79692 3.0258 1.79692 3.16283C1.79692 3.43353 1.87629 3.67499 2.03503 3.88721C2.19378 4.09943 2.39848 4.24397 2.64913 4.32083C2.69258 4.3342 2.7285 4.35927 2.75691 4.39603C2.78532 4.43279 2.79952 4.4729 2.79952 4.51634C2.79952 4.58318 2.77613 4.63582 2.72934 4.67425C2.68255 4.71268 2.62741 4.72355 2.56391 4.70684ZM3.43617 4.70684C3.37268 4.72355 3.31753 4.71185 3.27074 4.67175C3.22396 4.63164 3.20056 4.57817 3.20056 4.51133C3.20056 4.47122 3.21477 4.43279 3.24317 4.39603C3.27158 4.35927 3.30751 4.3342 3.35095 4.32083C3.6016 4.24063 3.8063 4.09525 3.96505 3.8847C4.12379 3.67415 4.20317 3.43353 4.20317 3.16283C4.20317 2.82862 4.0862 2.54455 3.85225 2.31061C3.61831 2.07667 3.33424 1.9597 3.00004 1.9597H2.985L3.06521 2.03991C3.10197 2.07667 3.12035 2.12346 3.12035 2.18027C3.12035 2.23709 3.10197 2.28388 3.06521 2.32064C3.02845 2.3574 2.98166 2.37578 2.92485 2.37578C2.86803 2.37578 2.82124 2.3574 2.78448 2.32064L2.36339 1.89954C2.34334 1.87949 2.32913 1.85777 2.32078 1.83438C2.31242 1.81098 2.30824 1.78592 2.30824 1.75918C2.30824 1.73244 2.31242 1.70738 2.32078 1.68398C2.32913 1.66059 2.34334 1.63887 2.36339 1.61882L2.78448 1.19772C2.82124 1.16096 2.86803 1.14258 2.92485 1.14258C2.98166 1.14258 3.02845 1.16096 3.06521 1.19772C3.10197 1.23448 3.12035 1.28127 3.12035 1.33809C3.12035 1.3949 3.10197 1.44169 3.06521 1.47845L2.985 1.55866H3.00004C3.44787 1.55866 3.82719 1.71406 4.138 2.02487C4.4488 2.33568 4.60421 2.715 4.60421 3.16283C4.60421 3.52711 4.49559 3.85128 4.27836 4.13535C4.06113 4.41942 3.7804 4.60992 3.43617 4.70684Z"
-              fill="#DDDDDD"
+              fill="currentColor"
             />
           </svg>
-
           <span>초기화</span>
         </button>
       </header>
@@ -59,9 +48,8 @@
       </details>
     </aside>
 
-    <!-- ▣ 오른쪽 : 상품 리스트 -------------------------------- -->
     <section class="prod-zone">
-      <header class="prod-head">
+      <header class="sorting-bar">
         <strong class="total">총 110건</strong>
         <nav class="sort">
           <a href="#" class="on">추천순</a>
@@ -74,13 +62,21 @@
       </header>
 
       <ul class="prod-grid">
-        {% for i in "123" %}
+        {% for product in products %}
         <li class="card">
-          <div class="thumb">썸네일 자리</div>
+          <a href="{% url 'main:product_detail' product.id %}">
+  <figure class="thumb">
+  <img
+    src="{% static 'assets/img/milk.png' %}"
+    alt="{{ product.name }}"
+    width="262"
+    height="320"
+  />
+  </figure>
+</a>
 
-          <!-- 담기 버튼 -->
-          <button class="btn-cart">
-            <!-- ❶ 장바구니 아이콘 (Figma 원본) -->
+          <button type="button" class="btn-cart">
+            {% comment %}장바구니 SVG 그대로 가져옴{% endcomment %}
             <svg
               class="cart-ico"
               xmlns="http://www.w3.org/2000/svg"
@@ -107,25 +103,32 @@
               </defs>
             </svg>
 
-            <!-- ❷ 버튼 텍스트 -->
             <span>담기</span>
           </button>
 
-          <!-- ↓ 새로 분리한 정보 박스 -->
           <div class="info">
             <p class="ship">샛별배송</p>
-            <p class="name">[기꼬만] 일본 두유 7종 (200 mL × 6개)</p>
-            <p class="desc">다채롭게 즐기는 두유</p>
+            <p class="name">{{ product.name }}</p>
+            <p class="desc">{{ product.description }}</p>
 
-            <div class="price-box">
-              <span class="del">7,500 원</span>
-              <span class="rate">14 %</span>
-              <span class="sale">6,400 원</span>
-            </div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
+             <div class="price-box">
+        {% if product.discount_rate %}
+          <span class="del-rate">
+            <span class="del">{{ product.origin_price }} 원</span>
+            <span class="rate">{{ product.discount_rate }} %</span>
+          </span>
+          <span class="sale">{{ product.discount_price }} 원</span>
+        {% else %}
+          <span class="sale">{{ product.origin_price }} 원</span>
+        {% endif %}
+      </div>
+    </li>
+  {% empty %}
+    <li class="card">
+      <p>상품이 없습니다.</p>
+    </li>
+  {% endfor %}
+</ul>
     </section>
     <!-- /prod-zone -->
   </section>
