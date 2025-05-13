@@ -166,7 +166,6 @@ details[open] summary::after {
 .sort a {
   font-size: 14px;
   color: #666;
-  margin-left: 16px;
 }
 .sort .on {
   color: #000;
@@ -297,11 +296,13 @@ details[open] summary::after {
 }
 .price-box {
   display: flex;
-  align-items: center;
-  gap: 4px;
   flex-wrap: wrap;
+  gap: 0px;
 }
-.del {
+.price-box .del {
+  flex-basis: 100%;
+  display: block;
+  margin-bottom: 1px;
   text-decoration: line-through;
   color: #999;
   font-size: 13px;
@@ -309,14 +310,19 @@ details[open] summary::after {
 .rate {
   color: #ff5000;
   font-weight: 700;
-} /* 빨간 “14 %” */
+}
+.discount-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
 .del-rate {
   white-space: nowrap;
 }
 .sale {
   font-size: 16px;
   font-weight: 700;
-  flex-basis: 100%;
+
   margin-top: 2px;
 }
 .sorting-bar {

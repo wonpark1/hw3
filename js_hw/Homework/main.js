@@ -1,34 +1,47 @@
 //main.js
 const customTag = {
-  tagName: "div", //value: 태그 이름
-  textContent: "", //value: 태그에 들어갈 텍스트
+  tagName: "div", // value: 태그 이름
+  textContent: "", // value: 태그에 들어갈 텍스트
   styles: {
-    color: "black", //글자의 색
-    fontSize: "18px", //글자 크기
+    // value: 태그에 적용할 스타일
+    color: "black", // 글자 색
+    fontSize: "18px", // 글자 크기
   },
-  id: "", //태그의 id
-  class: [], //태그의 클래스들
+  id: "", // 태그의 id
+  class: [], // 태그에 붙일 클래스 리스트
+
+  // ─────────── 수정된 메서드들 ───────────
   changeTagName(newTag) {
     this.tagName = newTag;
-  }, //태그의 tagName을 바꾸는 함수
+    this.render("container");
+  },
+
   changeTextContent(newText) {
     this.textContent = newText;
-  }, //태그의 textContent를 바꾸는 함수
+    this.render("container");
+  },
+
   changeStyles(property, value) {
     this.styles[property] = value;
-  }, //태그의 스타일을 바꾸는 함수
+    this.render("container");
+  },
+
   setId(newId) {
     this.id = newId;
-  }, //태그의 아이디를 바꾸는 함수
+    this.render("container");
+  },
+
   addClassName(className) {
     if (!this.class.includes(className)) {
       this.class.push(className);
+      this.render("container");
     }
-  }, //태그의 클래스 이름를 추가하는 함수
+  },
+
   removeClassName(className) {
     this.class = this.class.filter((c) => c !== className);
-  }, //태그의 특정 클래스 이름를 제거하는 함수
-
+    this.render("container");
+  },
   // 여기 아래 부분은 수정하지 마시오.
   toHTML() {
     // 클래스 문자열 생성
@@ -63,3 +76,6 @@ const customTag = {
     }
   },
 };
+window.addEventListener("DOMContentLoaded", () => {
+  customTag.render("container");
+});

@@ -30,6 +30,7 @@
   align-items: end;
   justify-content: center;
   gap: 0.625rem; /* 10px */
+  color: #999999;
 }
 
 .topnav .div {
@@ -136,6 +137,12 @@ input::placeholder {
   border-radius: 2rem; /* 32px */
   border: 1px solid #e2e2e2;
 }
+.topnav .nav-2 .nav-menu-list > a:hover {
+  /* 밑줄 효과 */
+  text-decoration: underline;
+  /* 색상 보라로 변경 */
+  color: #5e0080;
+}
 
 /* 폰트 설정 */
 .Btn-nav {
@@ -239,11 +246,11 @@ input::placeholder {
 }
 
 .text-font1 {
-  color: #333333;
+  color: #828282;
 }
 
 .text-font2 {
-  color: #999999;
+  color: #bfbfbf;
 }
 .text-font3 {
   color: #dddddd;
@@ -254,7 +261,6 @@ input::placeholder {
     brightness(84%) contrast(112%);
 }
 
-/* 아이콘 크기설정 */
 .icon-24 {
   width: 24px;
   height: 24px;
@@ -263,4 +269,8 @@ input::placeholder {
 .icon-16 {
   width: 1rem;
   height: 1rem;
+}
+.topnav .nav-1 a {
+  color: #999999;
+  text-decoration: none;
 }

@@ -113,12 +113,13 @@
 
              <div class="price-box">
         {% if product.discount_rate %}
-          <span class="del-rate">
+          
             <span class="del">{{ product.origin_price }} 원</span>
-            <span class="rate">{{ product.discount_rate }} %</span>
-          </span>
-          <span class="sale">{{ product.discount_price }} 원</span>
-        {% else %}
+            <span class="discount-info">
+              <span class="rate">{{ product.discount_rate }} %</span>
+              <span class="sale">{{ product.discount_price }} 원</span>
+            </span>
+          {% else %}
           <span class="sale">{{ product.origin_price }} 원</span>
         {% endif %}
       </div>
